@@ -60,21 +60,21 @@ function formatQuote(quote) {
 }
 
 $(function() {
-    var d = new Date();
-    var t = d.getTime() + d.getTimezoneOffset() * 60000;
-    var n = Math.floor(t / (1000 * 60 * 5.972));
+    $.getJSON("http://time.jsontest.com/", function(tzdata) {
+        var n = Math.floor(tzdata.milliseconds_since_epoch / (15 * 60 * 1000));
 
-    if (((n % 2243) % 5) > 0) {
-        var limit = 20;
+        if (((n % 2243) % 5) > 0) {
+            var limit = 20;
 
-        $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=" + toString(limit), function(data) {
-            $("#motd").html(formatQuote(data.data.children[(n % 2609) % limit].data.title));
-            $("#quoter").html('~ ' + quoters[(n % 491) % quoters.length]);
-            $("#quoter")[0].style.display = "block";
+            $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=" + toString(limit), function(data) {
+                $("#motd").html(formatQuote(data.data.children[(n % 2609) % limit].data.title));
+                $("#quoter").html('~ ' + quoters[(n % 491) % quoters.length]);
+                $("#quoter")[0].style.display = "block";
+                $("#motdwrap")[0].style.color = "#828282";
+            });
+        } else {
+            $("#motd").html(messages[(n % 1549) % messages.length]);
             $("#motdwrap")[0].style.color = "#828282";
-        });
-    } else {
-        $("#motd").html(messages[(n % 1549) % messages.length]);
-        $("#motdwrap")[0].style.color = "#828282";
-    }
+        }
+    });    
 });
