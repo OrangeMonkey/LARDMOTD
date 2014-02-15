@@ -37,9 +37,6 @@ html, body
     height: 100%;
     background-color: #ffffff;
     padding: none;
-    font-family: GeosansLight;
-    font-size: 32px;
-    color: #828282;
     text-align: center;
 }
 
@@ -80,6 +77,13 @@ html, body
     width: 480px;
     height: 128px;
     line-height: 128px;
+
+    font-family: GeosansLight;
+    font-size: 32px;
+    color: #ffffff;
+
+    transition: color 2s;
+    -webkit-transition: color 2s;
 }
 
 #motd

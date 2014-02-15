@@ -24,8 +24,10 @@ $(function() {
             $("#motd").html('"' + data.data.children[(n * 2609) % 10].data.title + '"');
             $("#quoter").html('~ ' + quoters[(n * 491) % quoters.length]);
             $("#quoter")[0].style.display = "block";
+            $("#motdwrap")[0].style.color = "#828282";
         });
     } else {
         $("#motd").html(messages[(n * 1549) % messages.length]);
+        $("#motdwrap")[0].style.color = "#828282";
     }
 });
