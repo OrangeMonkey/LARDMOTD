@@ -97,7 +97,7 @@ $(function() {
             var limit = 20;
 
             $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=" + toString(limit), function(data) {
-                $("#motd").html(formatQuote(data.data.children[(n % 2609) % limit].data.title));
+                $("#motd").html('<iframe width="420" height="315" src="//www.youtube.com/embed/_X6VoFBCE9k" frameborder="0" allowfullscreen></iframe>');//formatQuote(data.data.children[(n % 2609) % limit].data.title));
                 $("#quoter").html('~ ' + quoters[(n % 491) % quoters.length]);
                 $("#quoter")[0].style.display = "block";
                 $("#motdwrap")[0].style.color = "#828282";
