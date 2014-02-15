@@ -63,23 +63,28 @@ html, body
 
 #header
 {
+    display: inline-block;
     padding-top: 64px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-bottom: 64px;
     width: 284px;
-    height: 216px;
+    height: 0px;
 }
 
 #motdwrap
 {
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -64px;
+    margin-left: -240px;
     width: 480px;
     height: 128px;
-    vertical-align: middle;
+    line-height: 128px;
 }
 
 #motd
 {
-
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
 }
