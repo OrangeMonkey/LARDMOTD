@@ -30,7 +30,8 @@ function formatQuote(quote) {
 
 $(function() {
     var d = new Date();
-    var n = Math.floor(d.getTime() / (1000 * 60 * 5.972));
+    var t = d.getTime() + d.getTimezoneOffset() * 60000;
+    var n = Math.floor(t / (1000 * 60 * 5.972));
 
     if (((n % 2243) % 5) > 0) {
         $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=20", function(data) {
