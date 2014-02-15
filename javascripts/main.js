@@ -9,7 +9,8 @@ var messages = [
     "Beepdy Boopdy Beepdy Boop",
     "Stick together team!",
     "Do you want to build a snowman?",
-    "Every round is a Zeus fight"
+    "Every round is a Zeus fight",
+    "Dota 2 is crap"
 ];
 
 var quoters = [
