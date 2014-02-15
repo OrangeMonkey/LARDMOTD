@@ -15,7 +15,38 @@ var quoters = [
     "Napoleon Bonaparte",
     "Julius Caesar",
     "Alexander the Great",
-    "Cyrus the Great"
+    "Cyrus the Great",
+    "Sun Tzu",
+    "Leonidas",
+    "Pericles",
+    "Hannibal",
+    "Spartacus",
+    "Tiberius",
+    "Hadrian",
+    "Marcus Aurelius",
+    "Constantine the Great",
+    "Macbeth",
+    "Saladin",
+    "William Wallace",
+    "Henry V",
+    "Joan of Arc",
+    "Francisco Pizarro",
+    "Hernán Cortés",
+    "Cuauhtémoc",
+    "Oda Nobunaga",
+    "Oliver Cromwell",
+    "Louis XIV",
+    "Peter the Great",
+    "George Washington",
+    "John Paul Jones",
+    "Miguel Hidalgo y Costilla",
+    "Francisco de Paula Santander",
+    "Ulysses S. Grant",
+    "Theodore Roosevelt",
+    "Dwight D. Eisenhower",
+    "Mao Zedong",
+    "Fidel Castro",
+    "Che Guevara"
 ];
 
 function formatQuote(quote) {
@@ -34,8 +65,10 @@ $(function() {
     var n = Math.floor(t / (1000 * 60 * 5.972));
 
     if (((n % 2243) % 5) > 0) {
-        $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=20", function(data) {
-            $("#motd").html(formatQuote(data.data.children[(n % 2609) % 20].data.title));
+        var limit = 20;
+
+        $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=" + toString(limit), function(data) {
+            $("#motd").html(formatQuote(data.data.children[(n % 2609) % limit].data.title));
             $("#quoter").html('~ ' + quoters[(n % 491) % quoters.length]);
             $("#quoter")[0].style.display = "block";
             $("#motdwrap")[0].style.color = "#828282";
