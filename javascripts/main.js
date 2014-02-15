@@ -53,7 +53,13 @@ var quoters = [
     "Dwight D. Eisenhower",
     "Mao Zedong",
     "Fidel Castro",
-    "Che Guevara"
+    "Che Guevara",
+    "Metapyziks",
+    "The Orange Monkey",
+    "Ivanhoe",
+    "Refresh Yourself",
+    "Ukrainian Videogame Producer",
+    "Stubenhocker"
 ];
 
 function formatQuote(quote) {
