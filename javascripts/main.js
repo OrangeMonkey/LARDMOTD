@@ -61,7 +61,7 @@ var quoters = [
     "Che Guevara",
     "Metapyziks",
     "The Orange Monkey",
-    "Ivanhoe",
+    "Ivan Hoe",
     "Refresh Yourself",
     "Ukrainian Videogame Producer",
     "Stubenhocker"
