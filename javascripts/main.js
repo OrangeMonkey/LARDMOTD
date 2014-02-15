@@ -50,7 +50,7 @@ var quoters = [
 ];
 
 function formatQuote(quote) {
-    var matches = quote.match(/(".+")|('.+')/g);
+    var matches = quote.match(/(".+")/g);
 
     if (matches != null) {
         quote = matches[0].substring(1, matches[0].length - 1);
