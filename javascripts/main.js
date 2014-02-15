@@ -26,7 +26,7 @@ var messages = [
     '<img src="http://media.tumblr.com/1d8529cead8cdd1b9b472bae1b025d65/tumblr_inline_mjycwttt5f1qz4rgp.gif" />',
     '<img src="http://i.imgur.com/2kQcifM.gif" />',
     
-    '<iframe width="420" height="315" src="//www.youtube.com/embed/_X6VoFBCE9k" frameborder="0" allowfullscreen></iframe>'
+    '<iframe width="420" height="315" src="http://www.youtube.com/embed/_X6VoFBCE9k?autoplay=1" frameborder="0" allowfullscreen></iframe>'
 ];
 
 var quoters = [
@@ -97,7 +97,7 @@ $(function() {
             var limit = 20;
 
             $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=" + toString(limit), function(data) {
-                $("#motd").html('<iframe width="420" height="315" src="//www.youtube.com/embed/_X6VoFBCE9k" frameborder="0" allowfullscreen></iframe>');//formatQuote(data.data.children[(n % 2609) % limit].data.title));
+                $("#motd").html(formatQuote(data.data.children[(n % 2609) % limit].data.title));
                 $("#quoter").html('~ ' + quoters[(n % 491) % quoters.length]);
                 $("#quoter")[0].style.display = "block";
                 $("#motdwrap")[0].style.color = "#828282";
