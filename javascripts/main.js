@@ -13,6 +13,13 @@ var messages = [
     "Every round is a Zeus fight",
     "Dota 2 is crap",
     "Y'all my niggers.",
+    "Is Alex fucking Medaphydis?",
+    "GOD DAMNIT FIRE!",
+    "Lizards..? Are you fucking seriousy",
+    "Fury McFlurry sucks dick.",
+    "Ah fuck.. I can't believe you've done this",
+    "Can you be a bit more pacific?",
+    "Why is there no German-Flag?",
     
     '<img src="http://i.imgur.com/3BX3W3W.jpg" />',
     '<img src="http://img.pandawhale.com/post-12543-Bizarre-Giraffe-Dance-gif-GWuz.gif" />',
