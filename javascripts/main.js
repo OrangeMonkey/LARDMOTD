@@ -1,12 +1,14 @@
-var messages = [
-    "Protip: Right click to throw your knife for an impressive long-range kill",
-    "Protip: Shoot the heads",
-    "Protip: Press the W key to move forwards",
-    "Protip: Right click to look down iron sights",
-    "Protip: Disable your crosshair so it doesn't get in the way",
-    "Protip: Type 'unbind all' in the console to unlock extra weapons",
-    "Protip: Test if friendly fire is enabled by headshotting each team-mate multiple times",
-    
+var protips = [
+    "Right click to throw your knife for an impressive long-range kill",
+    "Shoot the heads",
+    "Press the W key to move forwards",
+    "Right click to look down iron sights",
+    "Disable your crosshair so it doesn't get in the way",
+    "Type 'unbind all' in the console to unlock extra weapons",
+    "Test if friendly fire is enabled by headshotting each team-mate multiple times"
+];
+
+var quotes = [    
     "Beepdy Boopdy Beepdy Boop",
     "Stick together team!",
     "Do you want to build a snowman?",
@@ -16,14 +18,28 @@ var messages = [
     "GOD DAMNIT FIRE!",
     "Lizards..? Are you fucking seriousy",
     "Can you be a bit more pacific?",
-    "Why is there no German-Flag?",
-    
-    '<img src="http://i.imgur.com/3BX3W3W.jpg" />',
-    '<img src="http://img.pandawhale.com/post-12543-Bizarre-Giraffe-Dance-gif-GWuz.gif" />',
-    '<img src="http://media.tumblr.com/1d8529cead8cdd1b9b472bae1b025d65/tumblr_inline_mjycwttt5f1qz4rgp.gif" />',
-    '<img src="http://i.imgur.com/2kQcifM.gif" />',
-    
-    '<iframe width="420" height="315" src="http://www.youtube.com/embed/_X6VoFBCE9k?autoplay=1" frameborder="0" allowfullscreen></iframe>'
+    "Why is there no German-Flag?"
+];
+
+var gifs = [    
+    "http://i.imgur.com/3BX3W3W.jpg",
+    "http://img.pandawhale.com/post-12543-Bizarre-Giraffe-Dance-gif-GWuz.gif",
+    "http://media.tumblr.com/1d8529cead8cdd1b9b472bae1b025d65/tumblr_inline_mjycwttt5f1qz4rgp.gif",
+    "http://i.imgur.com/2kQcifM.gif"
+];
+
+var vids = [
+    "_X6VoFBCE9k",
+    "gvdf5n-zI14",
+    "rdo7qvLEHog",
+    "MbtlghVYHjQ",
+    "CjhrIsSCcjs",
+    "CJ0C28d6oWY",
+    "jPb4oryoRMw",
+    "NuvuIO23vRg",
+    "9HxlrXPSnjA",
+    "lqYqyHBTZjg",
+    "L1BDM1oBRJ8"
 ];
 
 var quoters = [
@@ -83,25 +99,55 @@ function formatQuote(quote) {
         quote = matches[0].substring(1, matches[0].length - 1);
     }
 
-    return '"' + quote + '"';
+    return quote;
+}
+
+function setMOTD(message) {
+    $("#motd").html(message);
+    $("#motdwrap")[0].style.color = "#828282";
+}
+
+function setQuote(message, n) {
+    $("#motd").html('"' + message + '"');
+    $("#quoter").html('~ ' + quoters[(n % 491) % quoters.length]);
+    $("#quoter")[0].style.display = "block";
+    $("#motdwrap")[0].style.color = "#828282";
 }
 
 $(function() {
     $.getJSON("http://time.jsontest.com/", function(tzdata) {
+        var noContextLimit = 20;
+        var count = protips.length + quotes.length + gifs.length + vids.length + noContextLimit;
         var n = Math.floor(tzdata.milliseconds_since_epoch / (15 * 60 * 1000));
 
-        if (((n % 2243) % 5) > 0) {
-            var limit = 20;
+        var i = n % count;
 
-            $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=" + toString(limit), function(data) {
-                $("#motd").html(formatQuote(data.data.children[(n % 2609) % limit].data.title));
-                $("#quoter").html('~ ' + quoters[(n % 491) % quoters.length]);
-                $("#quoter")[0].style.display = "block";
-                $("#motdwrap")[0].style.color = "#828282";
-            });
-        } else {
-            $("#motd").html(messages[(n % 1549) % messages.length]);
-            $("#motdwrap")[0].style.color = "#828282";
+        if (i < protips.length) {
+            setMOTD("Protip: " + protips[i]);
+            return;
         }
+
+        i -= protips.length;
+        if (i < quotes.length) {
+            setQuote(quotes[i], n);
+            return;
+        }
+
+        i -= quotes.length;
+        if (i < gifs.length) {
+            setMOTD('<img src="' + gifs[i] + '" />');
+            return;
+        }
+
+        i -= gifs.length;
+        if (i < vids.length) {
+            setMOTD('<iframe width="420" height="315" src="http://www.youtube.com/embed/' + vids[i] + '?autoplay=1" frameborder="0" allowfullscreen></iframe>')
+            return;
+        }
+
+        i -= vids.length;
+        $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=" + toString(noContextLimit), function(data) {
+            setQuote(formatQuote(data.data.children[i].data.title), n);
+        });
     });    
 });
