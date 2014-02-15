@@ -17,11 +17,11 @@ var quoters = [
 
 $(function() {
     var d = new Date();
-    var n = Math.floor(d.getTime() / 300000);
+    var n = Math.floor(d.getTime() / (1000 * 60 * 5));
 
     if (((n * 2243) % 5) > 0) {
-        $.getJSON("http://www.reddit.com/r/nocontext/.json?limit=10", function(data) {
-            $("#motd").html('"' + data.data.children[n % 10].data.title + '"');
+        $.getJSON("http://www.reddit.com/r/nocontext/.json?limit=15", function(data) {
+            $("#motd").html('"' + data.data.children[(n * 2609) % 10].data.title + '"');
             $("#quoter").html('~ ' + quoters[(n * 491) % quoters.length]);
             $("#quoter")[0].style.display = "block";
         });

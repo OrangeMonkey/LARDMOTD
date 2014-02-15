@@ -92,6 +92,7 @@ html, body
 #quoter
 {
     text-align: right;
+    margin-top: -32px;
     height: 0px;
     width: 480px;
     font-size: 24px;
