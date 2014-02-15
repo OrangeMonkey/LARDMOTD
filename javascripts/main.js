@@ -10,7 +10,11 @@ var messages = [
     "Stick together team!",
     "Do you want to build a snowman?",
     "Every round is a Zeus fight",
-    "Dota 2 is crap"
+    "Dota 2 is crap",
+    '<img src="http://i.imgur.com/3BX3W3W.jpg" />',
+    '<img src="http://img.pandawhale.com/post-12543-Bizarre-Giraffe-Dance-gif-GWuz.gif" />',
+    '<img src="http://media.tumblr.com/1d8529cead8cdd1b9b472bae1b025d65/tumblr_inline_mjycwttt5f1qz4rgp.gif" />',
+    '<img src="http://i.imgur.com/2kQcifM.gif" />'
 ];
 
 var quoters = [
