@@ -37,18 +37,13 @@ html, body
     height: 100%;
     background-color: #ffffff;
     padding: none;
+    font-family: GeosansLight;
+    font-size: 32px;
+    color: #828282;
+    text-align: center;
 }
 
 #lshad
-{
-    background-image: url(../images/rshad.png);
-    width: 27px;
-    height: 100%;
-    float: left;
-    z-index: 1;
-}
-
-#rshad
 {
     background-image: url(../images/lshad.png);
     width: 27px;
@@ -57,14 +52,13 @@ html, body
     z-index: 1;
 }
 
-#main
+#rshad
 {
-    width: 100%;
+    background-image: url(../images/rshad.png);
+    width: 27px;
     height: 100%;
-    font-family: GeosansLight;
-    font-size: 32px;
-    color: #828282;
-    text-align: center;
+    float: left;
+    z-index: 1;
 }
 
 #header
