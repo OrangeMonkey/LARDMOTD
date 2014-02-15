@@ -88,3 +88,12 @@ html, body
     vertical-align: middle;
     line-height: normal;
 }
+
+#quoter
+{
+    text-align: right;
+    height: 0px;
+    width: 480px;
+    font-size: 24px;
+    display: none;
+}
