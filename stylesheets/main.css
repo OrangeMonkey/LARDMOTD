@@ -1,3 +1,9 @@
+@font-face
+{
+    font-family: GeosansLight;
+    src: url(../fonts/GeosansLight.ttf);
+}
+
 html, body
 {
     height: 100%;
@@ -53,7 +59,12 @@ html, body
 
 #main
 {
-
+    width: 100%;
+    height: 100%;
+    font-family: GeosansLight;
+    font-size: 32px;
+    color: #828282;
+    text-align: center;
 }
 
 #header
@@ -63,4 +74,18 @@ html, body
     margin-right: auto;
     width: 284px;
     height: 216px;
+}
+
+#motdwrap
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
+    height: 128px;
+    vertical-align: middle;
+}
+
+#motd
+{
+
 }
