@@ -1,8 +1,15 @@
 var messages = [
     "Protip: Right click to throw your knife for an impressive long-range kill",
     "Protip: Shoot the heads",
+    "Protip: Press the W key to move forwards",
+    "Protip: Right click to look down iron sights",
+    "Protip: Disable your crosshair so it doesn't get in the way",
+    "Protip: Type 'unbind all' in the console to unlock extra weapons",
+    "Protip: Test if friendly fire is enabled by headshotting each team-mate multiple times",
     "Beepdy Boopdy Beepdy Boop",
-    "Stick together team"
+    "Stick together team!",
+    "Do you want to build a snowman?",
+    "Every round is a Zeus fight"
 ];
 
 var quoters = [
