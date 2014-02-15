@@ -15,19 +15,29 @@ var quoters = [
     "Cyrus the Great"
 ];
 
+function formatQuote(quote) {
+    var matches = quote.match(/(".+")|('.+')/g);
+
+    if (matches != null) {
+        quote = matches[0].substring(1, matches[0].length - 1);
+    }
+
+    return '"' + quote + '"';
+}
+
 $(function() {
     var d = new Date();
-    var n = Math.floor(d.getTime() / (1000 * 60 * 5));
+    var n = Math.floor(d.getTime() / (1000 * 60 * 5.972));
 
-    if (((n * 2243) % 5) > 0) {
+    if (((n % 2243) % 5) > 0) {
         $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=20", function(data) {
-            $("#motd").html(('"' + data.data.children[(n * 2609) % 20].data.title + '"').replace(/""/g, '"'));
-            $("#quoter").html('~ ' + quoters[(n * 491) % quoters.length]);
+            $("#motd").html(formatQuote(data.data.children[(n % 2609) % 20].data.title));
+            $("#quoter").html('~ ' + quoters[(n % 491) % quoters.length]);
             $("#quoter")[0].style.display = "block";
             $("#motdwrap")[0].style.color = "#828282";
         });
     } else {
-        $("#motd").html(messages[(n * 1549) % messages.length]);
+        $("#motd").html(messages[(n % 1549) % messages.length]);
         $("#motdwrap")[0].style.color = "#828282";
     }
 });
