@@ -6,11 +6,14 @@ var messages = [
     "Protip: Disable your crosshair so it doesn't get in the way",
     "Protip: Type 'unbind all' in the console to unlock extra weapons",
     "Protip: Test if friendly fire is enabled by headshotting each team-mate multiple times",
+    
     "Beepdy Boopdy Beepdy Boop",
     "Stick together team!",
     "Do you want to build a snowman?",
     "Every round is a Zeus fight",
     "Dota 2 is crap",
+    "Y'all my niggers.",
+    
     '<img src="http://i.imgur.com/3BX3W3W.jpg" />',
     '<img src="http://img.pandawhale.com/post-12543-Bizarre-Giraffe-Dance-gif-GWuz.gif" />',
     '<img src="http://media.tumblr.com/1d8529cead8cdd1b9b472bae1b025d65/tumblr_inline_mjycwttt5f1qz4rgp.gif" />',
