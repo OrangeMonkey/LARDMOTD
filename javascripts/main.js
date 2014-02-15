@@ -21,7 +21,7 @@ $(function() {
 
     if (((n * 2243) % 5) > 0) {
         $.getJSON("http://www.reddit.com/r/nocontext/top.json?limit=20", function(data) {
-            $("#motd").html('"' + data.data.children[(n * 2609) % 20].data.title + '"');
+            $("#motd").html(('"' + data.data.children[(n * 2609) % 20].data.title + '"').replace(/""/g, '"'));
             $("#quoter").html('~ ' + quoters[(n * 491) % quoters.length]);
             $("#quoter")[0].style.display = "block";
             $("#motdwrap")[0].style.color = "#828282";
