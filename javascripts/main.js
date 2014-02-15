@@ -1,5 +1,8 @@
 var messages = [
-    "Protip: Right click to throw your knife for an impressive long-range kill"
+    "Protip: Right click to throw your knife for an impressive long-range kill",
+    "Protip: Shoot the heads",
+    "Beepdy Boopdy Beepdy Boop",
+    "Stick together team"
 ];
 
 var quoters = [
