@@ -120,7 +120,7 @@ $(function() {
         var count = protips.length + quotes.length + gifs.length + vids.length + noContextLimit;
         var n = Math.floor(tzdata.milliseconds_since_epoch / (15 * 60 * 1000));
 
-        var i = n % count;
+        var i = (n * 5153) % count;
 
         if (i < protips.length) {
             setMOTD("Protip: " + protips[i]);
