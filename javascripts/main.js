@@ -25,10 +25,13 @@ var gifs = [
     "http://i.imgur.com/3BX3W3W.jpg",
     "http://img.pandawhale.com/post-12543-Bizarre-Giraffe-Dance-gif-GWuz.gif",
     "http://media.tumblr.com/1d8529cead8cdd1b9b472bae1b025d65/tumblr_inline_mjycwttt5f1qz4rgp.gif",
-    "http://i.imgur.com/2kQcifM.gif"
+    "http://i.imgur.com/2kQcifM.gif",
+    "http://i.imgur.com/oyPFqcv.gif",
+    "http://i.imgur.com/hFTsIq3.gif",
+    "http://puu.sh/70WQm.gif"
 ];
 
-var vids = [
+var vids = [/*
     "_X6VoFBCE9k",
     "gvdf5n-zI14",
     "rdo7qvLEHog",
@@ -40,7 +43,7 @@ var vids = [
     "9HxlrXPSnjA",
     "lqYqyHBTZjg",
     "L1BDM1oBRJ8"
-];
+*/];
 
 var quoters = [
     "Georgy Zhukov",
