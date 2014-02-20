@@ -28,7 +28,9 @@ var gifs = [
     "http://i.imgur.com/2kQcifM.gif",
     "http://i.imgur.com/oyPFqcv.gif",
     "http://i.imgur.com/hFTsIq3.gif",
-    "http://puu.sh/70WQm.gif"
+    "http://puu.sh/70WQm.gif",
+    "http://i.imgur.com/F26H5.gif",
+    "http://31.media.tumblr.com/tumblr_ldlpeoz2p31qemhrqo1_250.gif"
 ];
 
 var vids = [/*
