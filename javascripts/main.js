@@ -30,7 +30,8 @@ var gifs = [
     "http://i.imgur.com/hFTsIq3.gif",
     "http://puu.sh/70WQm.gif",
     "http://i.imgur.com/F26H5.gif",
-    "http://31.media.tumblr.com/tumblr_ldlpeoz2p31qemhrqo1_250.gif"
+    "http://31.media.tumblr.com/tumblr_ldlpeoz2p31qemhrqo1_250.gif",
+    "http://static.naamapalmu.com/files/mu/big/kdpkquxl.gif"
 ];
 
 var vids = [/*
