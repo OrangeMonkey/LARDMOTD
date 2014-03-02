@@ -34,7 +34,8 @@ var gifs = [
     "http://static.naamapalmu.com/files/mu/big/kdpkquxl.gif",
     "http://i.imgur.com/Flmbxha.gif",
     "http://i.imgur.com/PXBIiXP.gif?1?3395",
-    "http://i.imgur.com/NhafFQA.gif"
+    "http://i.imgur.com/NhafFQA.gif",
+    "http://i.imgur.com/Obyhvw2.gif"
 ];
 
 var vids = [/*
