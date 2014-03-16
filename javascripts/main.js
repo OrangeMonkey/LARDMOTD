@@ -37,7 +37,8 @@ var gifs = [
     "http://i.imgur.com/NhafFQA.gif",
     "http://i.imgur.com/Obyhvw2.gif",
     "http://i.imgur.com/CuT28Zq.gif",
-    "http://fineleatherjackets.net/realhuman/bean.gif"
+    "http://fineleatherjackets.net/realhuman/bean.gif",
+    "http://i.imgur.com/irMt5wN.gif"
 ];
 
 var vids = [/*
